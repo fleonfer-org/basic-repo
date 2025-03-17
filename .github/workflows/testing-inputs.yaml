@@ -1,0 +1,15 @@
+name: 'Testing inputs'
+
+on:
+  workflow_dispatch:
+    inputs:
+      full_name:
+        description: 'Your name'
+        required: true
+        type: string
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ FULL_NAME }}
